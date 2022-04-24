@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mt-3 mb-3">
+                <div class="card-header bg-light">
+                    <h1 class="displat-5 fw-bold myHeader">
+                        Welcome to Online Test Application
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <p class="col-md-8 fs-4">
+                        The Online Test Application system creates an application that
+                        enables users to provide online tests, review them, and display the
+                        results. This quiz will contains total 10 questions and each
+                        question holds 5 points
+                    </p>
+                    <h1 class="rules">Quiz Rules</h1>
+                    <ol>
+                        <li>Each correct answer to the question gives you 5 points</li>
+                        <li>
+                            Each incorrect answer to the question will cost you 5 points
+                        </li>
+                        <li>You will have 30 seconds to answer each question</li>
+                        <li>
+                            Don't refresh the page or leave the page during the quiz, failing
+                            to do so will end the test and submit automaically.
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-footer bg-ligh text-center">
+                    <h1 class="wishes">All the Best!!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit(myReactiveForm)">
+             <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control mt-3 mb-3" formControlName="email" placeholder="Enter email" />
+                <div class="alert alert-danger" role="alert" *ngIf="
+            myReactiveForm.get('email').invalid &&
+            (myReactiveForm.get('email') || myReactiveForm.get('email').dirty)
+          ">
+                    Please provide a Email Address
+                </div>
+            </div>            
+            <button type="submit" class="btn btn-primary mt-3" [disabled]="myReactiveForm.invalid">
+                Start Quiz
+            </button>
+        </form>
+    </div>
+</div>
+

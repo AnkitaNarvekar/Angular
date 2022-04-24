@@ -1,0 +1,36 @@
+{
+  "questions": [
+    {
+      "questionText": "AngularJS uses dependency injection and make use of separation of concerns",
+      "options": [{ "text": "Yes", "correct": true }, { "text": "No" }]
+    },
+    {
+      "questionText": "What is a controller in MVC?",
+      "options": [
+        { "text": "It is a software Code that stores the data" },
+        { "text": "It is a software Code that renders the user interface" },
+        { "text": "It is a software Code that controls the interactions between the Model and View" , "correct": true },
+        { "text": "None of the above"}
+      ]
+    },
+    {
+      "questionText": "ng-click directive represents a AngularJS click event",
+      "options": [{ "text": "True", "correct": true }, { "text": "False" }]
+    },
+
+    {
+      "questionText":"Which components can be injected as a dependency in AngularJS?",
+      "options":[
+        {"text":"Application Module"},
+        {"text":"constant"},
+        {"text":"value"},
+        {"text":"constant"}
+      ]
+    },
+
+    {
+      "questionText":"Which of the followings are validation directives?",
+      "options":[{"text":"ng-required"},{}]
+    }
+  ]
+}
